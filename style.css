@@ -1,0 +1,89 @@
+@font-face {
+	font-family: "SpaceMono Nerd Font";
+	font-display: swap;
+	src:
+		local("SpaceMono Nerd Font"), url(../resources/SpaceMonoNF.woff) format("woff");
+}
+
+:root {
+	--text-color: #c0caf5;
+	--hover-color: #bb9af7;
+	--accent-color: #7aa2f7;
+	--background-color: #1a1b26;
+	color-scheme: dark;
+}
+
+body,
+html {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100svh;
+	margin: 0;
+	font-family: "SpaceMono Nerd Font", monospace;
+	color: var(--text-color);
+	background: var(--background-color) url("resources/topography.svg");
+	transition: background-color 0.2s ease-in-out;
+	overflow-x: hidden;
+}
+
+#date {
+	font-size: 2.5em;
+	font-weight: 900;
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+
+.header {
+	color: var(--accent-color);
+	font-size: 1.6em;
+	font-weight: 600;
+	margin-top: 1em;
+}
+
+#links {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	margin: 0.2rem 0;
+}
+
+a {
+	color: var(--text-color);
+	font-size: 1.2em;
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--hover-color);
+	font-style: italic;
+}
+
+/* -------------------------- */
+
+@media (max-width: 1200px) {
+	#links {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 900px) {
+	#links {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	#links {
+		grid-template-columns: 1fr;
+	}
+}
