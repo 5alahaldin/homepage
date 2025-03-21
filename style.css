@@ -1,9 +1,4 @@
-@font-face {
-	font-family: "SpaceMono Nerd Font";
-	font-display: swap;
-	src: local("SpaceMono Nerd Font"), url("resources/SpaceMonoNF.woff") format("woff");
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 :root {
 	--text-color: #c0caf5;
@@ -20,7 +15,7 @@ html {
 	justify-content: center;
 	min-height: 100svh;
 	margin: 0;
-	font-family: "SpaceMono Nerd Font", monospace;
+	font-family: "Space Mono", monospace;
 	color: var(--text-color);
 	background: var(--background-color) url("resources/topography.svg");
 	transition: background-color 0.2s ease-in-out;
